@@ -281,9 +281,13 @@ start_services() {
   fi
 }
 
+service iptables stop
+chkconfig iptables off
+chkconfig owp on
+
 print_access_info() {
   puts "Panel should be available at:"
-  puts "http://`hostname -f`:3000"
+  puts "http://`hostname -I`:3000"
   puts "Default credentials: admin/admin"
 }
 
