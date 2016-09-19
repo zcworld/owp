@@ -39,7 +39,7 @@ and virtual servers with the OpenVZ virtualization technology.
 
 ## 4. Installation
 
-See INSTALL file for installation instructions.
+See  install.zcw file for installation instructions.
 
 
 ## 5. Usage
