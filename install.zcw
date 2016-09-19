@@ -1,0 +1,12 @@
+quick and simple  install
+
+Centos ver 6.8 ( 7+ is not supported)
+
+yum install -y wget
+wget -P /etc/yum.repos.d/ https://download.openvz.org/openvz.repo
+rpm --import http://download.openvz.org/RPM-GPG-Key-OpenVZ
+yum install -y vzkernel vzctl vzquota ploop
+
+reboot
+
+wget -O - https://raw.githubusercontent.com/zcworld/owp/master/installer/ai.sh | sh
