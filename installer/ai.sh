@@ -97,7 +97,7 @@ resolve_deps() {
     fi
 
     gem list rake -i
-    [ $? -ne 0 ] && gem install rake -v 10.2.2
+    [ $? -ne 0 ] && gem install rake
 
     gem list rdoc -i
     [ $? -ne 0 ] && gem install rdoc
@@ -281,10 +281,9 @@ start_services() {
   fi
 }
 
-
 print_access_info() {
   puts "Panel should be available at:"
-  puts "http://`hostname -I':3000"
+  puts "http://`hostname -f`:3000"
   puts "Default credentials: admin/admin"
 }
 
@@ -329,8 +328,3 @@ main() {
 }
 
 main
-
-
-service iptables stop
-chkconfig iptables off
-chkconfig owp on
