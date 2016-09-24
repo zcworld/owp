@@ -97,7 +97,7 @@ resolve_deps() {
     fi
 
     gem list rake -i
-    [ $? -ne 0 ] && gem install rake
+    [ $? -ne 0 ] && gem install rake -v 10.2.2
 
     gem list rdoc -i
     [ $? -ne 0 ] && gem install rdoc
